@@ -11,8 +11,11 @@ RUN apt-get install -y libglu1-mesa
 # Slicer 4.8.0 http://download.slicer.org/bitstream/561384"
 # Slicer 4.8.1 http://download.slicer.org/bitstream/738960"
 
-# Slicer 4.10.1
-RUN SLICER_URL="http://download.slicer.org/bitstream/944596" && \
+# Slicer 4.10.2
+https://download.slicer.org/bitstream/1023242
+# slicer preview 4.latest on 2019/03/27
+# https://download.slicer.org/bitstream/1216419
+RUN SLICER_URL="https://download.slicer.org/bitstream/1216419" && \
   curl -v -s -L $SLICER_URL | tar xz -C /tmp && \
   mv /tmp/Slicer* /opt/slicer
 
@@ -33,6 +36,10 @@ RUN chown -R researcher:researcher /home/researcher/.config
 RUN LNUM=$(sed -n '/launcher_item_app/=' /etc/tint2/panel.tint2rc | head -1) && \
   sed -i "${LNUM}ilauncher_item_app = /opt/slicer/slicer.desktop" /etc/tint2/panel.tint2rc
 
+#leipzig BGNN stuff
+COPY /root/INHSTools.py /opt/slicer/lib/Slicer-4.11/qt-scripted-modules/INHSTools.py
+COPY /root/.htpasswd /etc/nginx/.htpasswd
+  
 # Note that slicer is started automatically at login from /etc/skel/.xinitrc
 # it will run whatever is in the user's home directory .slicerrc.py, so any
 # users of this docker image have the option of putting arbitrary startup commands in that file.
