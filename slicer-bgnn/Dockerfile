@@ -19,6 +19,6 @@ RUN mv bgnn_related-1.0/.slicerrc.py /home/researcher/.slicerrc.py
 RUN mv bgnn_related-1.0 /home/researcher/bgnn_related
 
 ENV labs="${labs}"
-
+ENV SLICER_ARGUMENTS="--additional-module-paths /home/researcher/bgnn_related"
 #COPY /root/INHSTools.py /opt/slicer/lib/Slicer-4.11/qt-scripted-modules/INHSTools.py
 
