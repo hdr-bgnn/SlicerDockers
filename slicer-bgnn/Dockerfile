@@ -5,7 +5,6 @@ MAINTAINER leipzig@gmail.com
 RUN rm /etc/nginx/nginx.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY htpasswd /etc/nginx/.htpasswd
-RUN nginx stop
 RUN nginx -t
 
 
