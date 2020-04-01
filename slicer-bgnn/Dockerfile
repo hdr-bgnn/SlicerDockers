@@ -9,8 +9,8 @@ COPY htpasswd /etc/nginx/.htpasswd
 
 COPY 1227656.tar.gz /tmp/1227656.tar.gz
 RUN gunzip /tmp/1227656.tar.gz && tar -xvf /tmp/1227656.tar
-RUN mv /opt/slicer/Slicer /opt/slicer/orig_slicer
-RUN mv Slicer-4.11.0-2020-04-01-linux-amd64 /opt/slicer/Slicer
+RUN mv /opt/slicer /opt/orig_slicer
+RUN mv Slicer-4.11.0-2020-04-01-linux-amd64 /opt/slicer
 
 #leipzig BGNN stuff
 RUN wget https://github.com/hdr-bgnn/bgnn_related/archive/1.0.tar.gz
