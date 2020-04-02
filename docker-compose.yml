@@ -10,47 +10,47 @@ services:
             - labs=tulane_ugur
         image: 'leipzig/slicer-bgnn:latest'
     aliah:
-    ports:
-            - '8084:8080'
-    volumes:
-            - '/vol_b:/segmented'
-    container_name: tulane_aliah
-    environment:
-            - labs=tulane_aliah
-    image: 'leipzig/slicer-bgnn:latest'
+        ports:
+                - '8084:8080'
+        volumes:
+                - '/vol_b:/segmented'
+        container_name: tulane_aliah
+        environment:
+                - labs=tulane_aliah
+        image: 'leipzig/slicer-bgnn:latest'
     aaron:
-    ports:
-            - '8081:8080'
-    volumes:
-            - '/vol_b:/segmented'
-    container_name: tulane_aaron
-    environment:
-            - labs=tulane_aaron
-    image: 'leipzig/slicer-bgnn:latest'
+        ports:
+                - '8081:8080'
+        volumes:
+                - '/vol_b:/segmented'
+        container_name: tulane_aaron
+        environment:
+                - labs=tulane_aaron
+        image: 'leipzig/slicer-bgnn:latest'
     battelle:
-    ports:
-            - '8083:8080'
-    volumes:
-            - '/vol_b:/segmented'
-    container_name: battelle
-    environment:
-            - labs=battelle
-    image: 'leipzig/slicer-bgnn:latest'
+        ports:
+                - '8083:8080'
+        volumes:
+                - '/vol_b:/segmented'
+        container_name: battelle
+        environment:
+                - labs=battelle
+        image: 'leipzig/slicer-bgnn:latest'
     drexel:
-    ports:
-            - '8082:8080'
-    volumes:
-            - '/vol_b:/segmented'
-    container_name: drexel
-    environment:
-            - labs=drexel
-    image: 'leipzig/slicer-bgnn:latest'
+        ports:
+                - '8082:8080'
+        volumes:
+                - '/vol_b:/segmented'
+        container_name: drexel
+        environment:
+                - labs=drexel
+        image: 'leipzig/slicer-bgnn:latest'
     seattle:
-    ports:
-            - '8080:8080'
-    volumes:
-            - '/vol_b:/segmented'
-    container_name: seattle
-    environment:
-            - labs=seattle
-    image: 'leipzig/slicer-bgnn:latest'
+        ports:
+                - '8080:8080'
+        volumes:
+                - '/vol_b:/segmented'
+        container_name: seattle
+        environment:
+                - labs=seattle
+        image: 'leipzig/slicer-bgnn:latest'
