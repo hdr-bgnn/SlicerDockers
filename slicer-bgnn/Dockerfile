@@ -13,10 +13,10 @@ RUN mv /opt/slicer /opt/orig_slicer
 RUN mv Slicer-4.11.0-2020-04-01-linux-amd64 /opt/slicer
 
 #leipzig BGNN stuff
-RUN wget https://github.com/hdr-bgnn/bgnn_related/archive/1.0.tar.gz
-RUN tar -xvf 1.0.tar.gz
-RUN mv bgnn_related-1.0/.slicerrc.py /home/researcher/.slicerrc.py
-RUN mv bgnn_related-1.0 /home/researcher/bgnn_related
+RUN wget https://github.com/hdr-bgnn/bgnn_related/archive/1.2.tar.gz
+RUN tar -xvf 1.2.tar.gz
+RUN mv bgnn_related-1.2/.slicerrc.py /home/researcher/.slicerrc.py
+RUN mv bgnn_related-1.2 /home/researcher/bgnn_related
 
 ENV labs="${labs}"
 ENV SLICER_ARGUMENTS="--additional-module-paths /home/researcher/bgnn_related"
